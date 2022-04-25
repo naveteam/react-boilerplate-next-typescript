@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "commit": "npx git-cz",
+    "prettier": "prettier --write '**/*.js' --ignore-path .gitignore",
+    "eslint": "eslint --ignore-path .gitignore .",
+    "pretest": "yarn eslint"
   },
   "dependencies": {
     "next": "12.1.0",
