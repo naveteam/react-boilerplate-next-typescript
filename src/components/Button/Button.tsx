@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 import {
   border,
@@ -15,21 +15,14 @@ import {
   TypographyProps
 } from 'styled-system'
 
-type StyledSystemProps = SpaceProps &
-  LayoutProps &
-  TypographyProps &
-  BorderProps &
-  PositionProps &
-  ColorProps & {
-    children: ReactNode
-  }
+type StyledSystemProps = SpaceProps & LayoutProps & TypographyProps & BorderProps & PositionProps & ColorProps
 
 type ButtonProps = StyledSystemProps & {
   children: ReactNode
   variant?: 'primary' | 'secondary'
 }
 
-const ButtonComponent = ({ children, ...props }: ButtonProps) => <Button {...props}>{children}</Button>
+const ButtonComponent: React.FC = ({ children, ...props }: ButtonProps) => <Button {...props}>{children}</Button>
 
 const Button: React.FC<ButtonProps> = styled.button`
   ${space}
