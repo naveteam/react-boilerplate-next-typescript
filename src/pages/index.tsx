@@ -1,7 +1,11 @@
+import { Text } from 'components'
+import { useTheme } from 'styled-components'
+
 export default function Home() {
+  const { colors } = useTheme()
   return (
-    <h1>
+    <Text variant='big' color={colors.black}>
       A well-structured production ready Next.js boilerplate with Typescript
-    </h1>
-  );
+    </Text>
+  )
 }
