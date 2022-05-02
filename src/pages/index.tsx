@@ -1,3 +1,9 @@
+import { Button } from '../components'
+
 export default function Home() {
-  return <h1>A well-structured production ready Next.js boilerplate with Typescript</h1>
+  return (
+    <Button p={40} m={40} borderRadius={9999}>
+      My Button
+    </Button>
+  )
 }
