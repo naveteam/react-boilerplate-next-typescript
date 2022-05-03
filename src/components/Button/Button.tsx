@@ -17,7 +17,7 @@ import {
 
 type StyledSystemProps = SpaceProps & LayoutProps & TypographyProps & BorderProps & PositionProps & ColorProps
 
-type ButtonProps = StyledSystemProps & {
+export type ButtonProps = StyledSystemProps & {
   children: ReactNode
   variant?: 'primary' | 'secondary'
 }
