@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    "pre-commit": "echo 'Pre-commit cheks...' && lint-staged",
+    "pre-push": "echo 'Pre-push cheks...' && yarn test --watchAll=false"
+  }
+}
