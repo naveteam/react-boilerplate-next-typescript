@@ -13,4 +13,4 @@ export type SignInProps = {
 
 export const getUser = () => client.get<GetUserProps>('/v1/me')
 
-export const login = data => client.post<SignInProps>('/v1/users/login', data)
+export const login = (data: SignInProps) => client.post<SignInProps>('/v1/users/login', data)
