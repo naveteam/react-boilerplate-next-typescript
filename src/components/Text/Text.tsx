@@ -1,3 +1,4 @@
+import { ElementType } from 'react'
 import styled from 'styled-components'
 import {
   color,
@@ -24,7 +25,8 @@ type TextVariants = {
 }
 
 type TextProps = StyledSystemProps & {
-  variant: keyof TextVariants
+  variant?: keyof TextVariants
+  as?: ElementType | 'p'
 }
 
 const TextComponent: React.FC<TextProps> = styled.p(
