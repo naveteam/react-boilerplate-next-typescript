@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosInstance } from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
 import { getToken, PUBLIC_ROUTES } from 'helpers'
 
@@ -8,7 +8,7 @@ const defaultOptions: AxiosRequestConfig = {
   baseURL: __API__
 }
 
-const instance: AxiosInstance = axios.create(defaultOptions)
+const instance = axios.create(defaultOptions)
 
 instance.interceptors.request.use((config: AxiosRequestConfig) => {
   const token = getToken()
